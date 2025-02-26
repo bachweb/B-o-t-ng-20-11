@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh Sách Thành Viên</title>
+    <style>
+        a {
+            color: black; /* Màu xanh dương */
+            text-decoration: none; /* Loại bỏ gạch chân */
+        }
+
+        a:hover {
+            color: #FF5733; /* Đổi màu khi di chuột vào */
+        }
+    header {
+            background-color: #51A9FF; /* Màu nền */
+            padding: 20px; /* Tạo khoảng cách nội dung */
+            text-align: center; /* Căn giữa chữ */
+    }
+    .table { background-color: #A8D4FF;}
+    </style>
+</head>
+<body>
+    <header align="center">
+    <table width="100%">
+        <tr align="center">
+            <td width="100"><img src="nhom1.jpeg" alt="Logo Báo Tường" width="100"></td>
+            <td width="50"></td> <!-- Ô trống tạo khoảng cách -->
+            <td>
+                <h1> Chào Mừng Ngày Nhà Giáo Việt Nam 20/11 </h1>
+                <p><i>"Tôn sư trọng đạo - Tri ân thầy cô"</i></p>
+            </td>
+        </tr>
+    </table>
+</header>
+    <div class="table">
+<table border="1" width="100%">
+    <tr>
+        <!-- Cột chứa Logo -->
+        <td>
+            <a href="baotuong2011.html">
+                <img src="homeicon.png" width="50" height="50">
+</a>
+        <!-- Cột chứa các mục trong thanh điều hướng -->
+        <td align="center">
+            <a href="gioithieu.html">Giới Thiệu</a>          
+        </td>
+        
+        <td align="center">
+            <a href="danvu.html"> Dân Vũ
+            </a>
+        </td>
+        
+        <td align="center">
+            <a href="camhoa.html"> Cắm Hoa
+            </a>
+        </td>
+        
+        <td align="center">
+            <a href="baotuong.html">Báo Tường
+            </a>
+        </td>
+    </tr>
+</table>
+</div>
+    <h2>Danh Sách Thành Viên</h2>
+    <ul id="memberList"></ul>
+
+    <script>
+        // Khai báo mảng chứa tên thành viên
+        var members = ["Vũ Ngọc Ánh ", "Nguyễn Thị Vân Anh", "Nguyễn Minh Dương","Nguyễn Thị Thu Huyền", "Nguyễn Minh Đăng", "Phan Khánh Hà","Trần Thu Hà", "Nguyễn Thị Huệ"," Đinh Xuân Bách"];
+
+        // Lấy thẻ <ul> trong HTML
+        var list = document.getElementById("memberList");
+
+        // Duyệt mảng và thêm từng thành viên vào danh sách
+        for (var i = 0; i < members.length; i++) {
+            var listItem = document.createElement("li");  // Tạo thẻ <li>
+            listItem.textContent = members[i];  // Thêm nội dung
+            list.appendChild(listItem);  // Thêm vào danh sách
+        }
+    </script>
+
+</body>
+</html>

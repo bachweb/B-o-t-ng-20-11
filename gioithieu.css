@@ -1,0 +1,16 @@
+.p {font-size: 30px;}
+        a {
+            color: black; /* Màu xanh dương */
+            text-decoration: none; /* Loại bỏ gạch chân */
+        }
+
+        a:hover {
+            color: #FF5733; /* Đổi màu khi di chuột vào */
+        }
+    header {
+            background-color: #51A9FF; /* Màu nền */
+            padding: 20px; /* Tạo khoảng cách nội dung */
+            text-align: center; /* Căn giữa chữ */
+    }
+    .table { background-color: #A8D4FF;}
+

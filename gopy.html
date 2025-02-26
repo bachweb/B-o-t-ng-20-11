@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng Góp Ý</title>
+    <link rel="stylesheet" href="gopy.css">
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById("feedback-form").style.display = "none";
+            document.getElementById("thank-you-message").style.display = "block";
+        }
+
+        function goHome() {
+            window.location.href = "baotuong2011.html"; // Đổi thành đường dẫn trang chủ của bạn
+        }
+    </script>
+</head>
+
+<body>
+    <h1>BẢNG GÓP Ý</h1>
+
+    <form id="feedback-form" onsubmit="submitForm(event)">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn" required>
+
+        <label for="email">Email liên hệ:</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+
+        <label for="feedback-type">Loại góp ý:</label>
+        <select id="feedback-type" name="feedback-type">
+            <option value="gop-y">Góp ý chung</option>
+            <option value="khen-ngoi">Khen ngợi</option>
+            <option value="gop-y-cai-tien">Góp ý cải tiến</option>
+            <option value="khac">Khác</option>
+        </select>
+
+        <label for="message">Nội dung góp ý:</label>
+        <textarea id="message" name="message" placeholder="Nhập nội dung góp ý của bạn" required></textarea>
+
+        <button type="submit">Gửi góp ý</button>
+    </form>
+
+    <div id="thank-you-message" class="thank-you-message">
+        Cảm ơn bạn đã góp ý!
+        <br>
+        <button onclick="goHome()">Quay lại trang chủ</button>
+    </div>
+</body>
+</html>
